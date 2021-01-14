@@ -1,0 +1,18 @@
+
+<div class="wrap">
+    <div  *ngFor = "let movie of uniqueCats ; let i = index"class="slider">
+        <h2>{{movie}}</h2>
+    
+        <ul class="holder"  >
+            <div *ngFor = "let mov of films" >
+                <li   *ngIf="returnMovieCat(mov.genres,movie)"  [routerLink]="['/movie',mov.slug]" >
+                    <mat-card>
+                        <img [src]="mov.poster">
+                        <span>{{mov.title}}</span>
+                    </mat-card>
+            </div>
+            
+        </ul>
+    
+    </div>
+</div>

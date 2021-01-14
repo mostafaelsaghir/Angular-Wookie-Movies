@@ -1,0 +1,26 @@
+p {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 22px;
+  z-index: 2000;
+}
+.wrap {
+  padding-top: 62px;
+}
+.search-bar {
+  width: 100%;
+  text-align: right;
+  direction: rtl;
+  button {
+    height: 38px;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+  }
+  input {
+    height: 32px;
+    text-align: left;
+  }
+}

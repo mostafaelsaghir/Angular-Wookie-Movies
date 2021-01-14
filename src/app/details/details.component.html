@@ -1,0 +1,14 @@
+<div class="wrap-container" *ngIf="loaded">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile><img [src]="this.currentMovie.poster" alt=""></mat-grid-tile>
+        <mat-grid-tile><div class="text-container">
+            <mat-star-rating [rating]="currentMovie.imdb_rating"  [starCount]="10" (ratingUpdated)="onRatingChanged($event)"></mat-star-rating>
+            <h2>{{this.currentMovie.title}} ({{this.currentMovie.imdb_rating}}/10)</h2>
+            <h3>{{this.currentMovie.released_on | date}} | {{this.currentMovie.length}} | <span *ngFor = "let d of currentMovie.director">{{d}} </span></h3>
+           <p>{{this.currentMovie.overview}}</p>
+        </div>
+    </mat-grid-tile>
+      </mat-grid-list>
+
+</div>
+<img  *ngIf="loaded" [src]="currentMovie.backdrop"  class="back-drop" alt="">

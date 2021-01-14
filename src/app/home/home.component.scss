@@ -1,0 +1,29 @@
+.slider {
+  overflow-x: scroll;
+  .holder {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &:hover {
+      cursor: pointer;
+    }
+    width: 200%;
+    height: 400px;
+    width: 200%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: block;
+      width: 200px;
+      min-height: 200px;
+      float: left;
+      margin: 22px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.wrap {
+  padding: 22px;
+}
